@@ -1,0 +1,189 @@
+.banner {
+  color: white;
+  font-family: 'KoHo';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  min-height: 100vh !important;
+  position: relative;
+}
+
+nav {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  background-color: white !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .btn:hover {
+  color: white;
+}
+
+nav .dropdown-menu {
+  background-color: white;
+  border-radius: 0%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav .dropdown-menu a {
+  font-family: 'KoHo';
+  font-weight: bold !important;
+}
+
+nav .dropdown-submenu {
+  position: relative;
+}
+
+nav .dropdown-submenu ul {
+  left: 90% !important;
+  top: 5px !important;
+}
+
+nav .navbar-brand {
+  font-weight: bolder;
+  font-size: 26px !important;
+}
+
+nav .nav-link {
+  font-weight: bold;
+  font-family: 'KoHo';
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .dropdown > a {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .dropdown > a::after {
+  border: none !important;
+}
+
+@media (min-width: 990px) {
+  .navbar-collapse {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .navbar-collapse .navbar-nav {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .navbar-collapse .CTA {
+    color: white;
+    font-weight: bold;
+    border-radius: 37px;
+  }
+}
+
+.archive .excerpts {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.archive .sidebar {
+  width: 300px;
+  background-color: white;
+}
+
+.footer {
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+@media (max-width: 990px) {
+  .navbar-nav {
+    width: 90%;
+    margin: auto;
+  }
+  nav {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  nav .navbar-collapse .CTA {
+    color: white;
+    font-weight: bold;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 0px;
+  }
+}
+
+.catalogue {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalogue .card {
+  width: 300px;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+
+.catalogue .card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.catalogue .card strong {
+  text-decoration: underline;
+  font-family: 'Raleway';
+  font-weight: bolder !important;
+  font-size: 20px;
+}
+
+.catalogue .card p {
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.catalogue .card p a {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.catalogue .card .date {
+  border-top: solid 0.1px rgba(0, 0, 0, 0.068);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

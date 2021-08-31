@@ -1,0 +1,149 @@
+@import "variables";
+.banner{
+    color: white;
+    font-family: 'KoHo';
+    font-size: 20px;
+    font-weight: bold
+}
+.show {
+    display: block;
+}
+.hide{
+    display: none;
+}
+body{
+    min-height: 100vh !important;
+    position: relative;
+   
+}
+nav{
+    justify-content: space-between !important;
+    background-color:white !important;
+    align-items: center;
+    .btn{
+        &:hover{
+            color: white;
+        }
+    }
+    .dropdown-menu{
+        background-color: white;
+        border-radius: 0% ;
+        padding-left: 10px;
+        padding-right: 10px;
+        a{
+        font-family: 'KoHo';
+        font-weight: bold !important;
+        }
+    }
+    .dropdown-submenu{
+        position: relative;
+        ul{
+            left: 90% !important;
+            top: 5px !important;
+        }
+    }
+    .navbar-brand{
+        font-weight: bolder;
+        font-size: 26px !important;
+    }
+    .nav-link{
+    font-weight: bold;
+    font-family: 'KoHo';
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    }
+    .dropdown > a {
+        position: relative;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        &::after{
+            border: none !important;
+        }
+    }
+}
+// media queries
+// big screens
+@media (min-width: 990px){
+.navbar-collapse{
+    width: fit-content !important;
+   .navbar-nav{
+    justify-content: center !important;
+    flex-grow: 1;
+   }
+    .CTA{
+        color: white;
+        font-weight: bold;
+        border-radius: 37px;
+    }
+               }
+}
+// archive 
+.archive{
+.excerpts{
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  .sidebar{
+      width: 300px;
+      background-color: white;
+  }
+}
+.footer{
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
+// small screens
+@media (max-width:990px){
+    .navbar-nav{
+        width: 90%;
+        margin: auto;
+}
+nav{
+padding-left: 5px !important;
+padding-right: 5px !important;
+.navbar-collapse {
+    .CTA{
+        color: white;
+        font-weight: bold;
+        width: fit-content;
+        border-radius: 0px;
+}
+}
+}
+}
+//blog page
+.catalogue{
+    flex-wrap: wrap;
+    .card{
+        width: 300px;
+        border: none;
+        transition: 0.5s;
+        position: relative;
+        &:hover{
+            transform: scale(1.02);
+        }
+        strong{
+            text-decoration: underline;
+            font-family: 'Raleway';
+            font-weight: bolder !important;
+            font-size: 20px;
+        }
+        p{
+            font-family: 'Roboto';
+            font-weight: 400;
+            a{
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        .date{
+            border-top: solid 0.1px rgba(0, 0, 0, 0.068);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
