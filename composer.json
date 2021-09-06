@@ -1,0 +1,19 @@
+{
+    "name": "kanai/orchid",
+    "description": "A wordpress healthcare theme",
+    "autoload": {
+        "psr-4": {
+            "Kanai\\Orchid\\": "src/"
+        }
+    },
+    "require": {
+        "soderlind/class-customizer-toggle-control": "dev-master"
+    },
+    "extra": {
+        "installer-paths": {
+            "inc/{$name}": [
+                "soderlind/class-customizer-toggle-control"
+            ]
+        }
+    }
+}

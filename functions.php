@@ -11,7 +11,9 @@ wp_enqueue_style( 'Roboto', 'https://fonts.googleapis.com/css2?family=Roboto&dis
 wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js', 1.1, true);
  wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js', array ( 'jquery' ), 1.1, true);
 // require the theme customizer
-require(dirname(__FILE__).'/includes/scripts/customizer.php');
+require(dirname(__FILE__).'/includes/scripts/customizer/theme-options.php');
+require(dirname(__FILE__).'/includes/scripts/customizer/homepage.php');
+require(dirname(__FILE__).'/includes/scripts/function-admin.php');
 // support thumbnails
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'post-formats' );
@@ -27,4 +29,7 @@ add_theme_support( 'post-formats' );
         require_once get_template_directory() . '/src/class-wp-bootstrap-navwalker.php';
     }
     add_action( 'after_setup_theme', 'register_navwalker' );
-?>
+    function orc_get_footer_text(){
+       $text = " ".bloginfo( 'name' )." all rights reserved";
+        echo $text;
+    }
