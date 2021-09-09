@@ -1,30 +1,19 @@
 <?php get_header() ?>
-<div class="container-fluid catalogue py-5 flex">
-    <?php if (have_posts()) :
-        while (have_posts()) : the_post() ?>
-            <div class="card group hover:shadow-lg  shadow-sm  m-3">
-                <div class="thumbnail">
-                    <a href="<?php the_permalink() ?>">
-                        <?php the_post_thumbnail(['300', '169']) ?>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <a href="<?php the_permalink() ?>"><strong class="my-2"><?php the_title() ?></strong></a>
-                    <p class="text-muted my-2">
-                        <?php the_excerpt() ?>
-                    </p>
-                    <p>
-                        <a href="<?php the_permalink() ?>">READ MORE <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                    </p>
-
-                </div>
-                <div class="date px-4 py-1 text-muted">
-                    <small><?php echo get_the_date() ?></small>
-                </div>
-            </div>
-    <?php
-        endwhile;
-    endif;
-    ?>
+<div class="hero p-6" style="background-image:url('<?php echo get_theme_mod('hero_image', get_template_directory_uri() . '/includes/scripts/customizer/hero.jpg') ?>'); min-height:150px !important;">
+    <div class="text">
+        <h1>blog</h1>
+        <br>
+        <button class="btn text-center hero-cta" onclick="window.location = '<?php echo get_theme_mod('hero_button_link', '#'); ?>'" style="background-color: <?php echo get_theme_mod('theme_color', '#1CAA9D') ?>;">
+            <?php echo get_theme_mod('hero_button_text', 'take the first step,Call us');  ?>
+        </button>
+    </div>
+</div>
+<div class="flex archive">
+    <div class="container-fluid catalogue py-5 flex">
+        <?php get_template_part('template-parts/blog', 'catalogue') ?>
+    </div>
+    <div>
+        <?php orc_get_blog_sidebar() ?>
+    </div>
 </div>
 <?php get_footer() ?>

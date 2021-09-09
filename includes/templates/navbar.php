@@ -1,11 +1,11 @@
-<div class="banner themeBackgroundColor sticky-top shadow-lg <?php
+<div class="banner themeBackgroundColor sticky-top <?php
                                                                 if (get_theme_mod('banner_visibility', '1') == '1') {
                                                                     echo 'show';
                                                                 } elseif (get_theme_mod('banner_visibility', '1') == '0') {
                                                                     echo 'hide';
                                                                 } ?> p-1 text-right">
     <p class="font-weight-bold">
-        <?php echo get_theme_mod('edit_banner_text'); ?>
+        <?php echo get_theme_mod('edit_banner_text','Dont wait .Get help now. Call us on 123-567-890'); ?>
     </p>
 </div>
 <nav class="navbar px-9 navbar-expand-md py-3 text-light">
@@ -20,7 +20,7 @@
         } ?>
     </a>
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="<?php bloginfo('template_url') ?>/icons/menu.svg" alt="menu">
+        <img src="<?php bloginfo('template_url') ?>/icons/menu.svg"  width="30" height="30" alt="menu">
     </button>
     <?php
     wp_nav_menu(array(

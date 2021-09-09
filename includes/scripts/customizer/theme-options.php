@@ -127,7 +127,8 @@ function orc_customize_theme($wp_customize)
     $wp_customize->add_control('footer_shortcode', array(
         'type'  => 'text',
         'label' => 'add custom footer',
-        'description' => 'paste in your custom footer shortcode to use it',
+        'description' => 'paste in your custom footer shortcode to use it
+        .You can create your own custom footer using elementor blocks',
         'section' => 'footer_shortcode',
         'priority' => 1
     ));
@@ -144,7 +145,7 @@ function orc_customize_theme($wp_customize)
     $wp_customize->add_setting('theme_color', array(
         'title' => 'Theme color',
         'type'  => 'theme_mod',
-        'default' => '#1CAA9D'
+        'default' => '#29E2F2'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control(
         $wp_customize,
@@ -176,7 +177,7 @@ function orc_customize_theme($wp_customize)
     $wp_customize->add_setting('theme_body_color', array(
         'title' => 'Theme body color',
         'type'  => 'theme_mod',
-        'default' => '#EEFFFC'
+        'default' => '#FFF'
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control(
         $wp_customize,

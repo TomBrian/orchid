@@ -8,6 +8,7 @@ jQuery(($)=>{
 $('.navbar-collapse li a').addClass('themeSecondaryTextColor');
 var right = "&nbsp;&nbsp;&nbsp;&nbsp;<i class='fa fa-angle-right'></i>"
 var angle = "&nbsp;&nbsp;<i class='fas fa-angle-down'></i>"
+$('.dropdown-menu').addClass('px-3');
 $('.dropdown-menu .dropdown').addClass('dropdown-submenu');
 $('.dropdown-submenu .dropdown').addClass('dropdown-submenu');
 $('.dropdown-menu .dropdown-submenu').removeClass('dropdown');
@@ -26,4 +27,6 @@ $(document).ready(function(){
 });
 // add tailwind classes to the nav links
 $('.nav-item').addClass('mx-1');
+// wrap the aside elements in bootstrap card
+$('.sidebar .widget').addClass('m-3 p-3');
 });

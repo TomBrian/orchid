@@ -1,8 +1,9 @@
 .banner {
   color: white;
-  font-family: 'KoHo';
+  font-family: 'KoHo',sans-serif;
   font-size: 20px;
   font-weight: bold;
+  z-index: 3;
 }
 
 .show {
@@ -73,7 +74,7 @@ nav .dropdown-menu {
 
 nav .dropdown-menu a {
   color: white !important;
-  font-family: 'KoHo';
+  font-family: 'KoHo',sans-serif;
   font-weight: bold !important;
 }
 
@@ -122,33 +123,33 @@ nav .dropdown > a::after {
 
 .hero {
   color: white;
-  height: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 430px;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: darken;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .hero .text {
-  width: 50%;
+  width: 40%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .hero .text h1 {
-  font-family: 'KoHo';
+  font-family: 'KoHo',sans-serif;
   font-weight: bolder;
 }
 
 .hero .text p {
-  font-family: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-weight: unset;
 }
 
-.hero .text .btn {
+.hero button {
   width: 300px;
   color: white;
   font-size: 20px;
@@ -157,10 +158,88 @@ nav .dropdown > a::after {
   transition: 0.4s;
 }
 
-.hero .text .btn:hover {
+.hero button:hover {
   color: white;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.single .article {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  flex-grow: 1;
+}
+
+.single .article h1 {
+  font-family: 'raleway',sans-serif;
+}
+
+.single .article p {
+  font-family: 'roboto',sans-serif;
+}
+
+.single .sidebar {
+  max-width: 450px !important;
+  min-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.single .sidebar .card {
+  width: 100%;
+}
+
+.archive .catalogue {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.archive .catalogue .card.group {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 450px;
+}
+
+.archive .sidebar {
+  max-width: 450px !important;
+  min-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.archive .sidebar .card {
+  width: 100%;
 }
 
 @media (min-width: 990px) {
@@ -183,88 +262,24 @@ nav .dropdown > a::after {
   }
 }
 
-.archive .excerpts {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.archive .sidebar {
-  width: 300px;
-  background-color: white;
-}
-
-.theme-custom-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.theme-custom-footer .customize-partial-edit-shortcut {
-  position: absolute;
-  left: 60px;
-  z-index: 2;
-  top: 0px;
-}
-
-.theme-custom-footer .column.site-identity {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.theme-custom-footer .column.site-identity strong {
-  font-size: 30px;
-  text-transform: capitalize;
-}
-
-.theme-custom-footer .column {
-  width: 250px;
-  font-family: 'Roboto';
-}
-
-.theme-custom-footer .column ul {
-  opacity: 0.7;
-  font-size: 15px;
-}
-
-.theme-custom-footer .column ul ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.theme-custom-footer .column ul ol .icon {
-  font-size: 24px;
-  color: lightskyblue;
-}
-
-.theme-custom-footer .column p {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.footer {
-  position: absolute !important;
-  bottom: 0 !important;
-}
-
 @media (max-width: 990px) {
+  .archive {
+    width: 100%;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .archive .card {
+    margin: auto !important;
+    margin-bottom: 10px !important;
+  }
+  .single {
+    width: 100%;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .front-form {
+    margin: auto;
+  }
   nav {
     padding-left: 5px !important;
     padding-right: 5px !important;
@@ -283,6 +298,11 @@ nav .dropdown > a::after {
   }
   .dropdown > .dropdown-menu::before {
     border: none !important;
+  }
+  .hero .text {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
 }
 
@@ -314,13 +334,13 @@ nav .dropdown > a::after {
 
 .catalogue .card strong {
   text-decoration: underline;
-  font-family: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-weight: bolder !important;
   font-size: 20px;
 }
 
 .catalogue .card p {
-  font-family: 'Roboto';
+  font-family: 'Roboto',sans-serif;
   font-weight: 400;
 }
 
@@ -334,5 +354,24 @@ nav .dropdown > a::after {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.theme-custom-footer {
+  min-height: 250px;
+  margin-bottom: 0;
+}
+
+.footer {
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+blockquote {
+  padding-left: 20px;
+  border-left: solid 9px #efefef;
+}
+
+blockquote cite {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=main.css.map */
